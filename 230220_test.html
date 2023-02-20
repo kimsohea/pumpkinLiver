@@ -3,43 +3,251 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
 	<title>Wire Frame All In One</title>
 	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 		*{
-			margin: 0;
-			padding: 0;
+		    margin: 0;
+		    padding: 0;
+		    box-sizing: border-box;
+			font-family: 'Noto Sans KR', sans-serif;
+		    text-transform:capitalize;
+		}
+		ol,ul {
+		    list-style: none;
+		}
+		h1,h2,h3,h4,h5,h6,th {
+		    font-weight: inherit;
+		    font-size: inherit;
+		}
+		a {
+		    text-decoration: none;
+		    color:inherit;
+		}
+		table {
+		    border-collapse: collapse;
+		}
+		i,em,address {
+		    font-style: inherit;
+		}
+		b,strong {
+		    font-weight: inherit;
+		}
+		div{
+		    box-sizing: border-box;
+		}
+		.toggleBtn {
+			background: rgba(0, 0, 0, 0.8);
+			width: 60px;
+			height: 60px;
+			position: absolute;
+			top: 15px;
+			right: -80px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			border-radius: 20%;
+			transition: all .5s ease-in-out;
+			transform: rotate(360deg);
+			cursor: pointer;
+		}
+		.toggleBtn.active {
+			transform: rotate(0deg);
+			border-radius: 50%;
+		}
+		.toggleBtn>span {
+			width: 60%;
+			height: 1px;
+			border-radius: 1px;
+			background: #fff;
+			display: block;
+			margin:10% 0;
+			transition: all .5s ease-in-out;
+		}
+		.toggleBtn.active>span:nth-of-type(1) {
+			transform: rotate(45deg) translate(3px, -7px);
+    		transform-origin: left;
+    		width: 75%;
+		}
+		.toggleBtn.active>span:nth-of-type(2) {
+			transform: rotateY(-90deg);
+		}
+		.toggleBtn.active>span:nth-of-type(3) {
+			transform:rotate(-45deg) translate(3px, 7px);
+    		transform-origin: left;
+    		width: 75%;
+		}
+		.navi {
+			position: fixed;
+			width:160px;
+			height: 100vh;
+			background:rgba(0, 0, 0, 0.8);
+			border-right:1px solid rgba(0, 0, 0, 0.9);
+			color:#fff;
+		}
+		.navi h1 {
+			transform: rotate(-90deg) translate(-45%,22%);
+			display: inline-block;
+			font-weight: 700;
+		}
+		.navi h1 a {
+			display: block;
+			width: 120px;
+		}
+		.navi ul {
+			padding-top: 110px;
+		}
+		.navi ul a {
+			padding: 20px 25px;
+			display: block;
+			font-weight: 100;
+			letter-spacing: 2px;
+			font-family: 'Gloock', serif;
+		}
+		.navi button {
+			padding: 20px 25px;
+			background:none;
+			border:0;
+			color: #fff;
+			cursor: pointer;
+			width: 100%;
+			text-align: left;
+			font-family: 'Gloock', serif;
+		}
+		.main {
+			margin-left:160px;
+		}
+		.cont {
+			display: flex;
+			align-items: center;
+		}
+		.cont>*{
+			flex:1;
+		}
+		.cont01 {
+			height:390px;
+		}
+		.cont01 h2 {
+			font-size: 6.2rem;
+			font-family: 'Gloock', serif;
+			text-align: center;
+		}
+		.cont01 p {
+			margin-top: 10%;
+		}
+		.cont02 {
+			height: 350px;
+			text-align: center;
+			line-height: 1.7;
+		}
+		.cont02>*{
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 50px;
+		}
+		.cont02>.left {
+			color: #fff;
+			font-weight: 100;
+			background: rgba(6, 11, 91, 1);
+		}
+		.cont02>.right {
+			position: relative;
+			font-weight: 700;
+			background: rgba(255, 225, 0, 1);
+		}
+		.cont02>.right>.background {
+			position: absolute;
+			background-color: rgba(6, 11, 91, 1);
+			width: 25%;
+    		height: 85%;
+			border-radius: 130px;
+			outline:1px solid rgba(255, 225, 0, 1);
+			outline-offset: -15px;
+		}
+		.cont02>.right>p {
+			width: 25%;
+			color: #fff;
+			position: relative;
+			z-index: 2;
+			cursor: pointer;
+		}
+		.cont02>.right>p:hover + div {
+			animation: cont02Hover 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite alternate;
+		}
+		@keyframes cont02Hover {
+			0% {
+				transform: rotate(0deg);
+			}
+			5%{
+				transform: rotate(-12deg);
+			}
+			70%{
+				transform: rotate(30deg);
+			}
+			75%{
+				transform: rotate(28deg);
+			}
+			80% {
+				transform: rotate(32deg);
+			}
+			90%{
+				transform: rotate(28deg);
+			}
+			95% {
+				transform: rotate(32deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+		.cont03 {
+			height: 900px;
+		}
+		.cont04 {
+			height: 500px;
 		}
 	</style>
 </head>
 <body>
 	<div class="wrap">
-		<nav class="active">
-			<h1><a href="#">Logo</a></h1>
+		<nav class="navi active">
+			<h1><a href="#">Lorem ipsum dolor sit amet consectetur</a></h1>
 			<ul>
 				<li><a href="#">Menu01</a></li>
 				<li><a href="#">Menu02</a></li>
 				<li><a href="#">Menu03</a></li>
 				<li><a href="#">Menu04</a></li>
-				<li><button></button></li>
+				<li><button>search</button></li>
 			</ul>
+			<div class="toggleBtn scroll">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
 		</nav>
 		<div class="main">
-			<div class="cont01">
+			<div class="cont01 cont">
 				<h2>Lorem ipsum dolor</h2>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, nam.</p>
 			</div>
-			<div class="cont02">
+			<div class="cont02 cont">
 				<div class="left">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae magnam repellat, earum corrupti est quam a aliquam debitis praesentium soluta distinctio officiis recusandae eos maxime.</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, quo iusto hic repudiandae sapiente aliquam tenetur itaque neque possimus nulla illo minus ratione, impedit assumenda maiores cupiditate. Alias voluptatibus ratione sequi praesentium, perspiciatis asperiores non quam error laudantium tempora. Nam repellendus fugiat aliquam ratione provident totam tempore inventore nobis sint.</p>
 				</div>	
 				<div class="right">
-					<p>Lorem ipsum dolor sit amet</p>
+					<p>Lorem ipsum dolor, sit amet consectetur</p>
+					<div class="background"></div>
 				</div>	
 			</div>
-			<div class="cont03">
+			<div class="cont03 cont">
 				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium repellendus modi eveniet ducimus cumque maiores temporibus? Quasi, obcaecati deserunt at corrupti provident illo dicta nostrum iusto facere eos consectetur! Ea.</p>
 			</div>
-			<div class="cont04">
+			<div class="cont04 cont">
 				<div class="left">
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae magnam repellat, earum corrupti est quam a aliquam debitis praesentium soluta distinctio officiis recusandae eos maxime.</p>
 				</div>	
@@ -47,7 +255,7 @@
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut earum voluptatibus libero hic repudiandae? Nulla.</p>
 				</div>	
 			</div>
-			<div class="cont05">
+			<div class="cont05 cont">
 				<ul>
 					<li><a href="#"></a></li>
 					<li><a href="#"></a></li>
@@ -61,5 +269,24 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		//$(document).ready(function(){}); / $(function(){});
+		let tglStat = false;
+		let delta;
+		$(function(){
+			$(`.toggleBtn`).click(function(){
+				if (tglStat === true) {
+					$(this).removeClass(`active`);
+					tglStat = false;
+				} else {
+				$(this).addClass(`active`);
+				tglStat = true;
+			}
+			});
+			$(window).scroll(function(){
+				//console.log($(window).scrollTop());
+			});
+		});
+	</script>
 </body>
 </html>
