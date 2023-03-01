@@ -11,3 +11,65 @@
 .con03 {
     background-color: #ff8629;
 }
+nav {
+    position: fixed;
+    width: 220px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+nav h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   transform: rotate(-90deg) translateY(5px);
+    height: 175px;
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: #171717;
+    width: fit-content;
+}
+nav ul>li {
+    margin:60px auto;
+    font-size: 18px;
+    line-height: 1.44;
+    letter-spacing: -0.54px;
+    color: #171717;
+}
+.dldBtn button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+}
+.dldBtn img {
+    width: 10.9px;
+    height: 21.4px;
+}
+.dldBtn button>span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.23;
+    letter-spacing: -0.39px;
+}
+.brGrph {
+    pointer-events: none;
+}
+.ndldBtn {
+    background: #171717;
+    width: 144px;
+    height: 144px;
+    border-radius: 50%;
+    outline:#fff7eb solid 1px;
+    outline-offset: -12px;
+}
+.ndldBtn span {
+    color: #fff7eb;
+}

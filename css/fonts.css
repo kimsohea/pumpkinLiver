@@ -1,34 +1,37 @@
 /* font */
-nav {
-    font-family: Bahnschrift;
+html {
+    font-size: 16px;
 }
-.dld {
-    font-family: BespokeSerif;
+nav {
+    font-family: 'Bahnschrift';
+}
+.dldBtn {
+    font-family: 'Bespoke Serif', serif;
 }
 .textmove {
-    font-family: CenturyGothic;
+    font-family: 'CenturyGothic';
 }
 .con02 .pr>h3 {
-    font-family: OTOmniGothicH;
+    font-family: 'OTOmniGothicH';
 }
 .con02 .pr>p {
-    font-family: OTOmniGothicL;
+    font-family: 'OTOmniGothicL';
 }
 .con3 .lrnBtn {
-    font-family: CenturyGothic;
+    font-family: 'CenturyGothic';
 }
 .btn button{
-    font-family: OTOmniGothicL;
+    font-family: 'OTOmniGothicL';
 }
 .udt p {
-    font-family: OTOmniGothicB;
+    font-family: 'OTOmniGothicB';
 }
 .udt>button>span {
-    font-family: OTOmniGothicM;
+    font-family: 'OTOmniGothicM';
 }
 .contact h4 {
-    font-family: OTOmniGothicB;
+    font-family: 'OTOmniGothicB';
 }
 address a {
-    font-family: OTOmniGothicL;
+    font-family: 'OTOmniGothicL';
 }
