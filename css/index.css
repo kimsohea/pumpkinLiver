@@ -1,0 +1,13 @@
+.wrap {
+    background-image: linear-gradient(to bottom, #fff7eb, #f5e6d1);
+}
+.wrap>div {
+    width: 100%;
+    height:100vh;
+}
+.con01 {
+    background: #378b5e;
+}
+.con03 {
+    background-color: #ff8629;
+}

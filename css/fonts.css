@@ -1,0 +1,34 @@
+/* font */
+nav {
+    font-family: Bahnschrift;
+}
+.dld {
+    font-family: BespokeSerif;
+}
+.textmove {
+    font-family: CenturyGothic;
+}
+.con02 .pr>h3 {
+    font-family: OTOmniGothicH;
+}
+.con02 .pr>p {
+    font-family: OTOmniGothicL;
+}
+.con3 .lrnBtn {
+    font-family: CenturyGothic;
+}
+.btn button{
+    font-family: OTOmniGothicL;
+}
+.udt p {
+    font-family: OTOmniGothicB;
+}
+.udt>button>span {
+    font-family: OTOmniGothicM;
+}
+.contact h4 {
+    font-family: OTOmniGothicB;
+}
+address a {
+    font-family: OTOmniGothicL;
+}
