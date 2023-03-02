@@ -182,4 +182,27 @@ nav ul>li {
     position: absolute;
     top: 612px;
     right: -207px;
+    pointer-events: none;
+}
+.con02 .bgGrph>img:nth-of-type(1) {
+    position: absolute;
+    top:115px;
+    right:0;
+    z-index: 2;
+}
+.con02 {
+    position: relative;
+}
+.con02 .pr {
+    position: absolute;
+    width:284px;
+    text-align: center;
+}
+.pr01 {
+    top: 220px;
+    left: 640px;
+}
+.pr02 {
+    top: 540px;
+    right:430px;
 }
