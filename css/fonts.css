@@ -1,37 +1,47 @@
+
 /* font */
 html {
     font-size: 16px;
 }
+.dld {
+    font-family: 'BespokeSerif-Medium';
+}
+.dld .fweight {
+    font-family: 'BespokeSerif-Light';
+}
+
 nav {
     font-family: 'Bahnschrift';
 }
-.dldBtn {
-    font-family: 'Bespoke Serif', serif;
+
+.textmove p {
+    font-family: 'century_gothic', sans-serif;
 }
-.textmove {
-    font-family: 'CenturyGothic';
+.con3 .lrnBtn {
+    font-family: 'century_gothic', sans-serif;
 }
+
 .con02 .pr>h3 {
     font-family: 'OTOmniGothicH';
 }
+
 .con02 .pr>p {
     font-family: 'OTOmniGothicL';
-}
-.con3 .lrnBtn {
-    font-family: 'CenturyGothic';
 }
 .btn button{
     font-family: 'OTOmniGothicL';
 }
+address a {
+    font-family: 'OTOmniGothicL';
+}
+
 .udt p {
     font-family: 'OTOmniGothicB';
-}
-.udt>button>span {
-    font-family: 'OTOmniGothicM';
 }
 .contact h4 {
     font-family: 'OTOmniGothicB';
 }
-address a {
-    font-family: 'OTOmniGothicL';
+
+.udt>button>span {
+    font-family: 'OTOmniGothicM';
 }
