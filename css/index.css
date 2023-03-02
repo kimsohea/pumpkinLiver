@@ -1,5 +1,6 @@
 .wrap {
     background-image: linear-gradient(to bottom, #fff7eb, #f5e6d1);
+    overflow: hidden;
 }
 .wrap>div {
     width: 100%;
@@ -13,6 +14,7 @@
 }
 nav {
     position: fixed;
+    z-index: 5;
     width: 220px;
     height: 100vh;
     display: flex;
@@ -72,4 +74,112 @@ nav ul>li {
 }
 .ndldBtn span {
     color: #fff7eb;
+}
+.con01>.bgGrph {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.con01>.bgGrph>img:nth-of-type(1) {
+    width: 123.5px;
+    height: 122.7px;
+    position:absolute;
+    top: 80px;
+    left:200px;
+}
+.con01>.bgGrph>img:nth-of-type(2) {
+    width: 66.1px;
+    height: 66.1px;
+    position:absolute;
+    bottom: 50px;
+    right:100px;
+}
+.con01 .orangeCircle {
+    width: 507px;
+    height: 507px;
+    border-radius: 50%;
+    background-color: #ffd359;
+    position: absolute;
+    bottom: 161px;
+    right:74px;
+    z-index: 2;
+}
+.con01 .orangeLine {
+    width: 1449px;
+    height: 508px;
+    border-radius: 254px;
+    background-color: #ff6f00;
+    position: absolute;
+    top: 889px;
+    left: 200px;
+    transform: rotate(-45deg);
+}
+.textWrap {
+    position: absolute;
+    top:364px;
+    height:295px;
+    z-index: 2;
+    width: 100%;
+    overflow: hidden;
+}
+.textmove {
+    display: flex;
+}
+.textmove>p {
+    display: flex;
+    flex-direction: column;
+    font-size: 150px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.87;
+    letter-spacing: -4.5px;
+    text-align: left;
+    color: #171717;
+    margin-right:142px;
+    animation: textmove 7s linear infinite;
+}
+@keyframes textmove {
+    0% {
+        transform: translateX(-411px);
+    }
+    100% {
+        transform: translateX(-1168px);
+    }
+}
+.textmove>p>span:nth-of-type(2) {
+    text-indent: 50px;
+}
+.gradientMask {
+    position: absolute;
+    z-index: 3;
+    left:0;
+    top: 364px;
+    width:240px;
+    height:295px;
+    background:linear-gradient(to right, #378b5e, #378b5e00);
+}
+.con02>.bgGrph {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.con02 .orangeCircle {
+    width: 507px;
+    height: 507px;
+    position: absolute;
+    top: 318px;
+    left: 329px;
+    border-radius: 50%;
+    background: url('../img/dotcircle.svg') no-repeat 50% 60% , #ffd359;
+}
+.blackLine {
+    width: 1920px;
+    height: 508px;
+    transform: rotate(-45deg);
+    border-radius: 254px;
+    background-color: #242424;
+    position: absolute;
+    top: 612px;
+    right: -207px;
 }
