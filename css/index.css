@@ -1,4 +1,6 @@
+/* 레이아웃 및 기본설정 */
 .wrap {
+    min-width: 1903px;
     background-image: linear-gradient(to bottom, #fff7eb, #f5e6d1);
     overflow: hidden;
 }
@@ -12,6 +14,21 @@
 .con03 {
     background-color: #ff8629;
 }
+.brGrph {
+    pointer-events: none;
+}
+.ndldBtn {
+    background: #171717;
+    width: 144px;
+    height: 144px;
+    border-radius: 50%;
+    outline:#fff7eb solid 1px;
+    outline-offset: -12px;
+}
+.ndldBtn span {
+    color: #fff7eb;
+}
+/* 사이드바 */
 nav {
     position: fixed;
     z-index: 5;
@@ -56,8 +73,8 @@ nav ul>li {
     align-items: center;
 }
 .dldBtn img {
-    width: 10.9px;
-    height: 21.4px;
+    width: 19px;
+    height: 26.4px;
     margin-bottom:13px;
     transition: all 1s ease-in-out;
 }
@@ -84,20 +101,6 @@ nav ul>li {
     font-weight: 500;
     line-height: 1.23;
     letter-spacing: -0.39px;
-}
-.brGrph {
-    pointer-events: none;
-}
-.ndldBtn {
-    background: #171717;
-    width: 144px;
-    height: 144px;
-    border-radius: 50%;
-    outline:#fff7eb solid 1px;
-    outline-offset: -12px;
-}
-.ndldBtn span {
-    color: #fff7eb;
 }
 .con01>.bgGrph {
     position: relative;
@@ -161,14 +164,14 @@ nav ul>li {
     text-align: left;
     color: #171717;
     margin-right:142px;
-    animation: textmove 7s linear infinite;
+    animation: textmove 8s linear infinite;
 }
 @keyframes textmove {
     0% {
         transform: translateX(-411px);
     }
     100% {
-        transform: translateX(-1168px);
+        transform: translateX(-1118px);
     }
 }
 .textmove>p>span:nth-of-type(2) {
@@ -301,9 +304,130 @@ nav ul>li {
     height: 52px;
     padding: 19.5px 32.7px 15.5px 25.7px;
     margin-top: 30px;
+    font-size: 15px;
     color: #0a8dd1;
     border: solid 1px #0a8dd1;
 }
 .con03 .lrnBtn>button>img {
-    padding-left:22.8px;
+    padding-left:7.5px;
+}
+/* 4번째 단락 */
+
+.con04 .bgGrph {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.con04 .bgGrph>* {
+    position: absolute;
+}
+.con04 .bgGrph img:nth-of-type(1){
+    width: 980px;
+    height: 1271.9px;
+    top: -142px;
+    left: 99px;
+    pointer-events: none;
+}
+.con04 .bgGrph img:nth-of-type(2){
+    height: 100%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+} 
+.con04 .cDldBtn {
+    position: relative;
+    top: -632px;
+    left: 331px;
+    width: 748px;
+}
+.con04 .cDldBtn button {
+    width: 225px;
+    height: 52px;
+    margin-top: 29px;
+    padding: 19.5px 32.7px 15.5px 25.7px;
+    border: solid 1px #242424;
+}
+.con04 .cDldBtn h2 {
+    font-size: 45px;
+    line-height: 1.11;
+    letter-spacing: -1.35px;
+    color: #242424;
+}
+.con04 .cDldBtn p {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    line-height: 1.33;
+    letter-spacing: -0.9px;
+    color: #242424;
+    margin-top:55px;
+}
+.con04 .cDldBtn button {
+    font-size: 15px;
+}
+.con04 .cDldBtn button>img {
+    padding-left:7.5px;
+    transform: translate(10px, -4px);
+}
+/* footer */
+footer {
+    display: flex;
+    height: 260px;
+    background: #242424;
+    justify-content: flex-end;
+    align-items: center;
+}
+.udt button {
+    width: 304px;
+    height: 65px;
+    margin: 20px 0 0;
+    padding: 25px 38.4px 25px 43px;
+    border-radius: 33px;
+    background-color: #ffb231;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.fIcons {
+    display: flex;
+    margin-left: 100px;
+    margin-right: 240px;
+}
+.fIcons>* {
+    margin-right:50px;
+}
+.fIcons img {
+    mix-blend-mode: lighten;
+}
+.fIcons>a:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+}
+.fIcons>a:nth-of-type(1)>img {
+    width: 53px;
+    height: 53px;
+}
+.fIcons>a:nth-of-type(1) p {
+    display: flex;
+    flex-direction: column;
+    color: #fff7eb;
+    margin-left:9px;
+}
+.contact {
+    text-align: center;
+}
+.fdldBtn {
+    width: 334px;
+    height: 260px;
+    border-radius: 254px 0 0 254px;
+    background-color: #ffb231;
+}
+.fdldBtn button {
+    width: 138px;
+    height: 138px;
+    margin-left: 67px;
+    border-radius: 50%;
+    outline:#242424 solid 1px;
+    outline-offset: -12px;
 }

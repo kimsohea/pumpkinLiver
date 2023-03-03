@@ -34,6 +34,11 @@ nav {
     color: #fff7eb;
     font-weight: 600;
 }
+.con04 .btn h2 {
+    font-family: 'OTOmniGothicH','Inter', 'Noto Sans', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
 
 .con02 .pr>p {
     font-family: 'OTOmniGothicL','Inter', 'Noto Sans', sans-serif;  
@@ -45,6 +50,10 @@ nav {
     flex-direction: column;
     font-weight: 200;
 }
+.con04 .btn p {
+    font-family: 'OTOmniGothicL','Inter', 'Noto Sans', sans-serif;
+    font-weight: 300;
+}
 .btn button{
     font-family: 'OTOmniGothicL','Inter', 'Noto Sans', sans-serif;
     font-weight: 300;
@@ -52,18 +61,30 @@ nav {
 address a {
     font-family: 'OTOmniGothicL','Inter', 'Noto Sans', sans-serif;
     font-weight: 300;
+    color: #fff7eb;
 }
-
 .udt p {
     font-family: 'OTOmniGothicB','Inter', 'Noto Sans', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
+    color: #fff7eb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .contact h4 {
     font-family: 'OTOmniGothicB','Inter', 'Noto Sans', sans-serif;
     font-weight: 700;
+    color: #fff7eb;
+    margin-bottom: 16px;
 }
 
 .udt>button>span {
     font-family: 'OTOmniGothicM','Inter', 'Noto Sans', sans-serif;
     font-weight: 500;
+    font-size: 13px;
+}
+.fIcons a:nth-of-type(1) p {
+    font-family:' OTOmniGothicM''Inter', 'Noto Sans', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
 }
