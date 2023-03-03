@@ -17,10 +17,12 @@ nav {
 }
 
 .textmove p {
-    font-family: 'century_gothicbold', sans-serif;
+    font-family: 'Century Gothic', sans-serif;
+    font-weight: 700;
 }
 .con03 .lrnBtn {
-    font-family: 'century_gothicbold', sans-serif;
+    font-family: 'Century Gothic', sans-serif;
+    font-weight: 700;
 }
 
 .con02 .pr>h3 {
