@@ -15,4 +15,11 @@ $(function(){
 		$(`html,body`).stop().animate({scrollTop:posTop},500);
     }
     });
+    // console.log($(`.mouseTracking`).position());
+    $(`.con03`).mousemove(function(e){
+        let cusorX = e.clientX;
+        let cusorY = e.clientY;
+        $(`.mouseTracking`).css(`transform`,`translate(`+cusorX+`px,`+cusorY+`px)`)
+    });
 });
+
